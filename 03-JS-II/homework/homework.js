@@ -16,10 +16,7 @@ function mayoriaDeEdad(edad) {
   //Determinar si la persona según su edad puede ingresar a un evento.
   //Si tiene 18 años ó más, devolver --> "Allowed"
   //Si es menor, devolver --> "Not allowed"
-  if (edad >= 18){
-    return 'Allowed';
-  } else {
-    return 'Not allowed';
+  
 }
   
 function conection(status) {
@@ -29,7 +26,7 @@ function conection(status) {
   //De lo contrario, presumimos que el usuario está "Offline"
   //Devolver el estado de conexión de usuario en cada uno de los casos.
 
-    if (status === 1){
+   if (status === 1){
       return 'Online';
     } else if ( status === 2){
       return 'Away';
@@ -80,22 +77,22 @@ function esDiezOCinco(numero) {
   // Devuelve "true" si "numero" es 10 o 5
   // De lo contrario, devuelve "false"
   // Tu código:
-  if (numero === 10 || numero === 5){
+   if (numero === 10 || numero === 5){
     return true;
   } else {
     return false;
-  }
+  } 
 }
 
 function estaEnRango(numero) {
   // Devuelve "true" si "numero" es menor que 50 y mayor que 20
   // De lo contrario, devuelve "false"
   // Tu código:
-    if ( numero < 50 && numero > 20){
+     if ( numero < 50 && numero > 20){
       return true;
     } else {
       return false;
-    }
+    } 
 }
 
 function esEntero(numero) {
@@ -106,7 +103,7 @@ function esEntero(numero) {
   // De lo contrario, devuelve "false"
   // Pista: Puedes resolver esto usando `Math.floor`
   // Tu código:
-    return numero % 1 === 0;
+    /* return numero % 1 === 0; */
 }
 
 function fizzBuzz(numero) {
@@ -147,7 +144,7 @@ function esVerdadero(valor){
   //Escribe una función que reciba un valor booleano y retorne “Soy verdadero” 
   //si su valor es true y “Soy falso” si su valor es false.
   //Escribe tu código aquí
-    if (valor === true){
+     if (valor === true){
       return 'Soy verdadero';
     } else {
       return 'Soy falso';
@@ -168,11 +165,11 @@ function tablaDelSeis(){
 function tieneTresDigitos(numero){
   //Leer un número entero y retornar true si tiene 3 dígitos. Caso contrario, retorna false.
   //Escribe tu código aquí
-  if (numero.lenght = 3){
+   if (numero.lenght = 3){
     return true
   } else {
     return false;
-  }
+  } 
 }
 
 function doWhile(numero) {
