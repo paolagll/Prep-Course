@@ -3,7 +3,7 @@
 function devolverPrimerElemento(array) {
   // Devuelve el primer elemento de un  array (pasado por parametro)
   // Tu código:
-   return array[0]
+   return array[0];
 }
 
 
@@ -11,14 +11,14 @@ function devolverPrimerElemento(array) {
 function devolverUltimoElemento(array) {
   // Devuelve el último elemento de un array
   // Tu código:
-   return array[array.lenght - 1]
+  return array[array.length - 1];
 }
 
 
 function obtenerLargoDelArray(array) {
   // Devuelve el largo de un array
   // Tu código:
-   return array.lenght;
+   return array.length;
 }
 
 
@@ -27,6 +27,11 @@ function incrementarPorUno(array) {
   // Aumenta cada entero por 1
   // y devuelve el array
   // Tu código:
+
+  for (var i = 0; i < array.length; i++) {
+     array[i] = array[i] + 1;
+  }
+  return array;
 }
 
 
@@ -55,6 +60,7 @@ function dePalabrasAFrase(palabras) {
   // con espacios entre cada palabra
   // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
   // Tu código:
+  return palabras.join(' ');
 }
 
 
@@ -63,13 +69,12 @@ function arrayContiene(array, elemento) {
   // Devuelve "true" si está, o "false" si no está
   // Tu código:
 
-   for (let i = 0; i < array.length; i++) {
-    
+   for (var i = 0; i < array.length; i++) {
     if (array[i] === elemento){
       return true
     }
-    return false
   }
+  return false;
 }
 
 
@@ -78,7 +83,7 @@ function agregarNumeros(numeros) {
   // Suma todos los enteros y devuelve el valor
   // Tu código:
      var suma = 0
-    for (let i = 0; i < array.length; i++) {
+    for (var i = 0; i < numeros.length; i++) {
       suma = suma + numeros[i]
     }
     return suma;
@@ -89,6 +94,11 @@ function promedioResultadosTest(resultadosTest) {
   // "resultadosTest" debe ser una matriz de enteros (int/integers)
   // Itera (en un bucle) los elementos del array, calcula y devuelve el promedio de puntajes
   // Tu código:
+  var promedio = 0
+  for (var i = 0; i < resultadosTest.length; i++) {
+    promedio = promedio + resultadosTest[i];
+  }
+  return (promedio / resultadosTest.length);
 }
 
 
@@ -97,7 +107,7 @@ function numeroMasGrande(numeros) {
   // Devuelve el número más grande
   // Tu código:
      var mayor = 0
-    for (let i = 0; i < numeros.lenght; i++) {
+    for (var i = 0; i < numeros.length; i++) {
       if (numeros[i] > mayor){
         mayor = numeros [i]
       }
@@ -111,16 +121,16 @@ function multiplicarArgumentos() {
   // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
   // Escribe tu código aquí:
      var producto = 1
-   if (arguments.length = 0){
-     return 0
-   } else if ( arguments.length = 1 ){
-     return arguments [0]
-   }else {
-     for (let i = 0; i < array.length; i++) {
-      producto = producto * arguments [i]
+   if (arguments.length === 0){
+     return 0;
+   } else if ( arguments.length === 1 ){
+     return arguments [0];
+   } else {
+     for (var i = 0; i < arguments.length; i++) {
+      producto = producto * arguments[i];
      }
-   } return producto;
-
+   }
+   return producto;
 }
 
 
@@ -146,7 +156,7 @@ function diaDeLaSemana(numeroDeDia) {
    if (numeroDeDia === 1 || numeroDeDia === 7){
     return 'Es fin de semana';
   } else if (numeroDeDia > 1 || numeroDeDia < 7){
-    return 'Es dia laboral';
+    return 'Es dia Laboral';
   }
 } 
 
@@ -173,8 +183,8 @@ function todosIguales(arreglo) {
   //retornar true, caso contrario retornar false.
   //Escribe tu código aquí  
   
-     for (let i = 0; i < arreglo.lenght; i++) {
-      if (arreglo[i] === arreglo [i+1]) return true
+     for (let i = 0; i < arreglo.length; i++) {
+      if (arreglo[i] === arreglo[i+1]) return true
     }
     return false;
 } 
@@ -187,12 +197,12 @@ function mesesDelAño(array) {
   // Tu código:
 
  var meses = []
-  for (let i = 0; i < array.lenght; i ++) {
-    if ( array [i] === 'Enero '|| array [i] === 'Marzo' || array [i] === 'Noviembre') {
+  for (var i = 0; i < array.length; i ++) {
+    if ( array [i] === 'Enero'|| array [i] === 'Marzo' || array [i] === 'Noviembre') {
       meses.push(array[i])
     }
   }
-  if (meses.lenght < 3) {
+  if (meses.length < 3) {
     return 'No se encontraron los meses pedidos'
   } else {
     return meses;
@@ -204,7 +214,13 @@ function mayorACien(array) {
   //La función recibe un array con enteros entre 0 y 200. Recorrer el array y guardar en un nuevo array sólo los
   //valores mayores a 100 (no incluye el 100). Finalmente devolver el nuevo array.
   // Tu código:
-
+  var mayor = []
+  for (var i = 0; i < array.length; i++) {
+    if (array[i] > 100){
+      mayor.push(array[i]);
+    }
+  }
+  return mayor;
 }
 
 
@@ -226,7 +242,7 @@ function breakStatement(numero) {
     }
   }
   if (i < 10){
-    return 'Se interrumpio la ejecucion'
+    return 'Se interrumpió la ejecución'
   }else{
     return array2;
   }
